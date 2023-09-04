@@ -194,7 +194,7 @@ const ProductsContainer = () => {
 
                     <div className='flex items-center w-[50%] border-t border-b border-r gap-3 justify-center h-10 dropdownhead' onClick={switchDropdown}>
                         <BiSortAlt2 className='text-orange-500 text-2xl dropdownhead'/>
-                        <span className='text-lg dropdownhead'>Sort</span>
+                        <span className='text-lg dropdownhead'>Sort by</span>
 
                     </div>
 

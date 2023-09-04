@@ -72,7 +72,7 @@ useEffect(()=>{
 
 <div className='p-5 2xl:h-[500px] xl:h-[450px] lg:h-[400px] max-lg:h-[350px] max-sm:h-[300px]  shadow relative' id='vaow' onClick={deneyek}>
 <a href='#' id='AddToFavorite' className='z-10'>
-    <div className={`absolute top-4 left-1  border-2 p-1 rounded-full bg-white ${isContain ? "text-orange-400 hover:text-gray-300": "hover:text-orange-400 text-gray-300"} `} id='AddToFavorite' onClick={favorite}>
+    <div className={`absolute top-4 left-1  border-2 p-1 rounded-full bg-white ${window.screen.width>=640?`${isContain ? "text-orange-400 hover:text-gray-300": "hover:text-orange-400 text-gray-300"}`:`${isContain?"text-orange-400":"text-gray-300"}`}  `} id='AddToFavorite' onClick={favorite}>
       
      
       <AiFillHeart  size={22}/>

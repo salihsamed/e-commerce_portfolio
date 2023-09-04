@@ -84,7 +84,7 @@ const DetailComp = ({productInfo}) => {
             <div className='text-center text-xl mt-5'><span className='font-bold'>Count:</span>{productInfo?.rating?.count}</div>
             <div className='flex justify-center w-4/6 mx-auto mt-5 items-center max-sm:pb-10'>
 
-                <a onClick={favorite} className={`mr-5 cursor-pointer ${isContain ? "text-orange-400 hover:text-gray-300": " text-gray-300 hover:text-orange-400"}`} ><AiFillHeart size={30}/></a>
+                <a onClick={favorite} className={`mr-5 cursor-pointer ${window.screen.width>=640?`${isContain ? "text-orange-400 hover:text-gray-300": "hover:text-orange-400 text-gray-300"}`:`${isContain?"text-orange-400":"text-gray-300"}`}`} ><AiFillHeart size={30}/></a>
                 <button onClick={addBasket} className='py-2 px-4 bg-gradient-to-r from-orange-600 to-orange-400 hover:from-orange-500 hover:to-orange-300 rounded text-white font-bold '>Add to Cart</button>
 
             </div>

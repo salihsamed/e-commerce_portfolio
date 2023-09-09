@@ -20,44 +20,15 @@ const ProductsContainer = () => {
     const [sortBy,setSortBy]=useState("Default")
 
     
-
+   
    
 
-    const closeDropdown=(e)=>{
-
-
-        if(dropdown && !e.target.classList.contains("dropdownhead" ) && window.screen.width>=640){
-
-            setDropdown(false)
-
-
-
-
-        }
-
-
-
-
-    }
+    
 
     const switchDropdown=()=>{
 
 
-        if(!dropdown){
-
-            
-
-            setDropdown(true);
-            
-
-
-
-        }
-
-        else{
-
-            setDropdown(false);
-        }
+       setDropdown(!dropdown)
 
         
     }
@@ -92,7 +63,7 @@ const ProductsContainer = () => {
 
     }
 
-    document.addEventListener('mousedown',closeDropdown)
+    
 
    
 
@@ -160,11 +131,11 @@ const ProductsContainer = () => {
                 </div>
 
                 <div className='font-semibold mb-1 col-span-4 text-center mt-3 '>Sort by</div>
-                <div className={`border h-9 w-[70%] max-xl:w-full max-md:w-[118%] flex items-center rounded-sm mx-auto justify-between cursor-pointer px-2 relative dropdown ${dropdown?"border border-orange-500":""} transition-all `} onClick={switchDropdown}>
+                <div className={`border h-9 w-[70%] max-xl:w-full max-md:w-[118%] flex items-center rounded-sm mx-auto justify-between cursor-pointer px-2 relative dropdown ${dropdown?"border border-orange-500":""}  `} onClick={switchDropdown}>
 
-                    <div className={`dropdownhead flex items-center `}>{sortBy==="Default"?"Default":""}{sortBy==="priceUp"||sortBy==="priceDown"?"Price":""}{sortBy==="rating"?"Rating":""}{sortBy==="priceDown" && <BsArrowDown className='dropdownhead'/>}{sortBy==="priceUp" && <BsArrowUp className='dropdownhead'/>}</div>
+                    <div className={`dropdown flex items-center `}>{sortBy==="Default"?"Default":""}{sortBy==="priceUp"||sortBy==="priceDown"?"Price":""}{sortBy==="rating"?"Rating":""}{sortBy==="priceDown" && <BsArrowDown className='dropdownhead'/>}{sortBy==="priceUp" && <BsArrowUp className='dropdownhead'/>}</div>
                     
-                    <BiSortAlt2 className='text-orange-400 text-2xl dropdownhead'/>
+                    <BiSortAlt2 className='text-orange-400 text-2xl dropdown'/>
                      
                     
 
